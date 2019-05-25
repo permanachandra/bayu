@@ -1,33 +1,23 @@
 $.ajax({
-    url         : "http://api.alquran.cloud/v1/surah",
+    url       : "source/surah/surah_1.json",
     type        : "GET",
     dataType    : "json",
     cache: false,
-    //data        : {get_param : 'value'},
-    success     : function(result) {
-        
+    
+    success     : function(result) {        
        
-            let surat = result.data;
+            let surat = result;
               
         $.each(surat, function(i, data){
             //console.log(data.englishName);
 
             $('#list-surat').append (`   
 
-              <option>${data.englishName}</option>    
+              <option>${data.name}</option>    
+              
              
            `)
-
-
-
-
-
-
         })
-
-      
-
-
-
     }
 });
+
