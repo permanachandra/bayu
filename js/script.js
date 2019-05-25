@@ -12,24 +12,20 @@ $.ajax({
         $.each(surat, function(i, data){
             //console.log(data.englishName);
 
-            $('#drop').append (`
+            $('#list-surat').append (`
            
             <div class="dropdown">
-                        <button class="dropbtn">Dropdown
-            <i class="fa fa-caret-down"></i>
-                        </button>
-               <div class="dropdown-content">
-               <a href="#">${data.englishName}</a>
-                  
-                </div>
-            </div>
-              
-              
-           
-
-
-
-            `)
+        
+                <a class="dropdown-item" href="#">${data.englishName}</a>
+             
+            </div> 
+            
+                
+            
+            
+  
+             
+           `)
 
 
 
